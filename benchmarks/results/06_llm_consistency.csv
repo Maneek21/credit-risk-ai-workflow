@@ -1,0 +1,5 @@
+provider,model,agreement_rate_runs,n_profiles
+claude,claude-opus-4-7,0.9416195856873822,531
+openai,gpt-4o,0.9830508474576272,531
+openai,gpt-5.4,0.9868173258003766,531
+ope

@@ -1,0 +1,28 @@
+# HMDA NY 2022 — US jurisdiction with full fairness analysis
+# This is the canonical fairness benchmark in the repo: it's the only
+# public US lending dataset with real protected attributes
+# (derived_race, derived_ethnicity, derived_sex, applicant_age).
+
+dataset: hmda
+data_path: ./data/raw/hmda_ny_2022.csv
+jurisdiction: US
+
+model_type: xgboost
+hyperparams:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  scale_pos_weight: auto      # adapter computes from class balance at fit time
+
+test_size: 0.20
+val_size: 0.10
+random_state: 42
+
+compute_fairness: true
+compute_shap: true
+compute_drift: false          # set true and add temporal_column to test drift across years
+
+output_dir: ./output/hmda_us
+model_version: "1.0.0"

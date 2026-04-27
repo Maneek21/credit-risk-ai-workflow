@@ -1,0 +1,27 @@
+# UCI Default of Credit Card Clients — US jurisdiction
+# Public Taiwan dataset, 30K rows. Smallest of the three built-ins;
+# good for first-time users and CI smoke tests.
+
+dataset: uci
+data_path: ./data/raw/uci_default_credit.xls
+jurisdiction: US
+
+model_type: xgboost
+hyperparams:
+  n_estimators: 200
+  max_depth: 5
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  scale_pos_weight: 3.5      # ~22% default rate -> 78/22 ratio ~= 3.5
+
+test_size: 0.20
+val_size: 0.10
+random_state: 42
+
+compute_fairness: true        # SEX + AGE_BUCKET held aside in the adapter
+compute_shap: true
+compute_drift: false
+
+output_dir: ./output/uci_us
+model_version: "1.0.0"

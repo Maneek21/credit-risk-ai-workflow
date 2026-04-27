@@ -1,0 +1,14 @@
+
+
+---
+IMPORTANT NOTICES UNDER BRAZILIAN LAW (CDC, LGPD, CADASTRO POSITIVO):
+
+1. Under the Consumer Defence Code (Lei nº 8.078/1990, "CDC"), you have the right to clear, accurate, and adequate information about the reasons for the denial of this credit application, communicated immediately as required under Article 6 of the CDC.
+2. Under Article 20 of the General Data Protection Law (Lei nº 13.709/2018, "LGPD"), you have the right to request the review of decisions made solely on the basis of automated processing of personal data that affect your interests, including decisions intended to define your personal, professional, consumer, or credit profile, or aspects of your personality. The controller must provide clear and adequate information about the criteria and procedures used in the automated decision.
+3. Under the Credit Information Act (Lei nº 12.414/2011, "Cadastro Positivo"), you have the right to obtain a copy of your credit report from credit bureaus such as Serasa Experian, SPC Brasil, Boa Vista, or Quod, and to request the correction or removal of information you believe to be inaccurate.
+4. Sensitive personal data within the meaning of Article 5(II) of the LGPD — including data on racial or ethnic origin, religious conviction, political opinion, trade union membership, philosophical or political beliefs, health, sex life, genetic data, or biometric data — was not used as a determining factor in this decision.
+5. Complaints regarding the handling of your personal data may be referred to the National Data Protection Authority (ANPD, gov.br/anpd).
+6. Complaints regarding the conduct of the financial institution may be referred to the Central Bank of Brazil consumer channel (consumidor.bcb.gov.br) or to PROCON.
+7. You may contact the credit bureau at:
+   [BUREAU NAME, ADDRESS, PHONE — to be filled by institution]
+8. PENDING LEGISLATION: Bill PL 2338/2023 (the "AI Bill"), passed by the Federal Senate in late 2024 and pending in the Chamber of Deputies, would establish a risk-based framework for AI systems in Brazil. If enacted, credit-scoring systems are likely to be classified as high-risk and subject to additional governance, transparency, and human-oversight requirements.

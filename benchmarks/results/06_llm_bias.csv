@@ -1,0 +1,13 @@
+model,attribute,dp_diff,di_ratio,violates_4_5ths
+Claude Opus 4.7,sex,0.0021,0.9953,False
+Claude Opus 4.7,education,0.2995,0.5293,True
+Claude Opus 4.7,age,0.1657,0.7055,True
+GPT-4o,sex,0.009,0.9718,False
+GPT-4o,education,0.2381,0.493,True
+GPT-4o,age,0.0984,0.7376,True
+GPT-5.4,sex,0.0216,0.945,False
+GPT-5.4,education,0.2659,0.5257,True
+GPT-5.4,age,0.2292,0.5926,True
+GPT-OSS-120B,sex,0.0361,0.9052,False
+GPT-OSS-120B,education,0.1706,0.6375,True
+GPT-OSS-120B,age,0.5049,0.1417,True

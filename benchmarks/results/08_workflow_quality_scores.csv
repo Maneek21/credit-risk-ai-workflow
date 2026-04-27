@@ -1,0 +1,7 @@
+memo_dimension,memo_mean,memo_std,adverse_action_dimension,adverse_action_mean,adverse_action_std
+factual_grounding,2.378,0.688,reason_accuracy,4.431,0.802
+risk_identification,3.395,0.787,no_prohibited,5.0,0.0
+compliance,4.854,0.373,specificity,3.951,0.326
+hallucination,1.685,0.599,plain_language,4.765,0.426
+professional_quality,3.411,0.496,legal_completeness,4.314,0.675
+total_score (out of 25),15.723,2.12,total_score (out of 25),22.461,1.398

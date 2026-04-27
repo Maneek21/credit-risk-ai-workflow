@@ -1,0 +1,330 @@
+{
+  "model_path": "output\\hmda_us\\hmda_xgboost_v1_0_0.joblib",
+  "metrics": {
+    "auc": 0.8470162662372718,
+    "ks": 0.5453504359532376,
+    "brier": 0.13729870319366455,
+    "ece": 0.16600585520118474
+  },
+  "fairness": {
+    "derived_race": {
+      "attribute": "derived_race",
+      "groups": [
+        {
+          "group": "2 or more minority races",
+          "n": 29,
+          "approval_rate": 0.5862068965517241,
+          "deny_rate": 0.41379310344827586,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.23529411764705882
+        },
+        {
+          "group": "American Indian or Alaska Native",
+          "n": 68,
+          "approval_rate": 0.5882352941176471,
+          "deny_rate": 0.4117647058823529,
+          "tpr": 0.75,
+          "fpr": 0.175
+        },
+        {
+          "group": "Asian",
+          "n": 1750,
+          "approval_rate": 0.7954285714285714,
+          "deny_rate": 0.20457142857142857,
+          "tpr": 0.6633906633906634,
+          "fpr": 0.06552494415487714
+        },
+        {
+          "group": "Black or African American",
+          "n": 1556,
+          "approval_rate": 0.6690231362467867,
+          "deny_rate": 0.3309768637532134,
+          "tpr": 0.6902985074626866,
+          "fpr": 0.14215686274509803
+        },
+        {
+          "group": "Free Form Text Only",
+          "n": 11,
+          "approval_rate": 0.2727272727272727,
+          "deny_rate": 0.7272727272727273,
+          "tpr": 1.0,
+          "fpr": 0.0
+        },
+        {
+          "group": "Joint",
+          "n": 365,
+          "approval_rate": 0.8027397260273973,
+          "deny_rate": 0.19726027397260273,
+          "tpr": 0.6216216216216216,
+          "fpr": 0.08934707903780069
+        },
+        {
+          "group": "Native Hawaiian or Other Pacific Islander",
+          "n": 35,
+          "approval_rate": 0.6285714285714286,
+          "deny_rate": 0.37142857142857144,
+          "tpr": 0.7,
+          "fpr": 0.24
+        },
+        {
+          "group": "Race Not Available",
+          "n": 3257,
+          "approval_rate": 0.7325759901750076,
+          "deny_rate": 0.2674240098249923,
+          "tpr": 0.6524184476940382,
+          "fpr": 0.12288851351351351
+        },
+        {
+          "group": "White",
+          "n": 12929,
+          "approval_rate": 0.7575991956067755,
+          "deny_rate": 0.24240080439322453,
+          "tpr": 0.675622283682339,
+          "fpr": 0.1369494133487209
+        }
+      ],
+      "disparate_impact": 0.33974557865342847,
+      "demographic_parity_diff": 0.5300124533001246,
+      "equalized_odds_diff": 0.3783783783783784,
+      "passes": false
+    },
+    "derived_ethnicity": {
+      "attribute": "derived_ethnicity",
+      "groups": [
+        {
+          "group": "Ethnicity Not Available",
+          "n": 2929,
+          "approval_rate": 0.7234551041311028,
+          "deny_rate": 0.27654489586889724,
+          "tpr": 0.6649810366624526,
+          "fpr": 0.13283442469597756
+        },
+        {
+          "group": "Free Form Text Only",
+          "n": 18,
+          "approval_rate": 0.5,
+          "deny_rate": 0.5,
+          "tpr": 0.9,
+          "fpr": 0.0
+        },
+        {
+          "group": "Hispanic or Latino",
+          "n": 1598,
+          "approval_rate": 0.7077596996245307,
+          "deny_rate": 0.29224030037546933,
+          "tpr": 0.7076612903225806,
+          "fpr": 0.10526315789473684
+        },
+        {
+          "group": "Joint",
+          "n": 443,
+          "approval_rate": 0.7787810383747178,
+          "deny_rate": 0.22121896162528218,
+          "tpr": 0.6595744680851063,
+          "fpr": 0.10315186246418338
+        },
+        {
+          "group": "Not Hispanic or Latino",
+          "n": 15012,
+          "approval_rate": 0.7583932853717026,
+          "deny_rate": 0.24160671462829736,
+          "tpr": 0.6675257731958762,
+          "fpr": 0.13058448102116224
+        }
+      ],
+      "disparate_impact": 0.6420289855072464,
+      "demographic_parity_diff": 0.2787810383747178,
+      "equalized_odds_diff": 0.2404255319148937,
+      "passes": false
+    },
+    "derived_sex": {
+      "attribute": "derived_sex",
+      "groups": [
+        {
+          "group": "Female",
+          "n": 4732,
+          "approval_rate": 0.7180896027049873,
+          "deny_rate": 0.28191039729501266,
+          "tpr": 0.7010221465076661,
+          "fpr": 0.14362001124227095
+        },
+        {
+          "group": "Joint",
+          "n": 6804,
+          "approval_rate": 0.805408583186361,
+          "deny_rate": 0.19459141681363903,
+          "tpr": 0.6352201257861635,
+          "fpr": 0.10841679845369882
+        },
+        {
+          "group": "Male",
+          "n": 6905,
+          "approval_rate": 0.724837074583635,
+          "deny_rate": 0.27516292541636495,
+          "tpr": 0.6763231197771588,
+          "fpr": 0.13424657534246576
+        },
+        {
+          "group": "Sex Not Available",
+          "n": 1559,
+          "approval_rate": 0.7094291212315587,
+          "deny_rate": 0.2905708787684413,
+          "tpr": 0.6682808716707022,
+          "fpr": 0.1544502617801047
+        }
+      ],
+      "disparate_impact": 0.880831339572906,
+      "demographic_parity_diff": 0.09597946195480234,
+      "equalized_odds_diff": 0.06580202072150265,
+      "passes": true
+    },
+    "applicant_age": {
+      "attribute": "applicant_age",
+      "groups": [
+        {
+          "group": "25-34",
+          "n": 3972,
+          "approval_rate": 0.8444108761329305,
+          "deny_rate": 0.1555891238670695,
+          "tpr": 0.605301914580265,
+          "fpr": 0.06286061342241117
+        },
+        {
+          "group": "35-44",
+          "n": 5313,
+          "approval_rate": 0.7713156408808582,
+          "deny_rate": 0.22868435911914173,
+          "tpr": 0.6836158192090396,
+          "fpr": 0.1150317572335921
+        },
+        {
+          "group": "45-54",
+          "n": 4526,
+          "approval_rate": 0.7324348210340257,
+          "deny_rate": 0.26756517896597437,
+          "tpr": 0.6597659765976598,
+          "fpr": 0.13997071742313325
+        },
+        {
+          "group": "55-64",
+          "n": 3567,
+          "approval_rate": 0.6969442108214186,
+          "deny_rate": 0.30305578917858145,
+          "tpr": 0.6967391304347826,
+          "fpr": 0.1662259161314696
+        },
+        {
+          "group": "65-74",
+          "n": 1659,
+          "approval_rate": 0.6359252561784208,
+          "deny_rate": 0.3640747438215793,
+          "tpr": 0.7326086956521739,
+          "fpr": 0.2226855713094245
+        },
+        {
+          "group": "8888",
+          "n": 4,
+          "approval_rate": 0.5,
+          "deny_rate": 0.5,
+          "tpr": 1.0,
+          "fpr": 0.0
+        },
+        {
+          "group": "<25",
+          "n": 415,
+          "approval_rate": 0.8481927710843373,
+          "deny_rate": 0.15180722891566265,
+          "tpr": 0.5571428571428572,
+          "fpr": 0.06956521739130435
+        },
+        {
+          "group": ">74",
+          "n": 544,
+          "approval_rate": 0.6011029411764706,
+          "deny_rate": 0.39889705882352944,
+          "tpr": 0.6858638743455497,
+          "fpr": 0.24362606232294617
+        }
+      ],
+      "disparate_impact": 0.5894886363636364,
+      "demographic_parity_diff": 0.3481927710843373,
+      "equalized_odds_diff": 0.44285714285714284,
+      "passes": false
+    }
+  },
+  "shap_top_features": [
+    {
+      "feature": "num__debt_to_income_ratio",
+      "mean_abs_shap": 0.8524841666221619
+    },
+    {
+      "feature": "cat__loan_purpose_1",
+      "mean_abs_shap": 0.447601854801178
+    },
+    {
+      "feature": "num__loan_to_value_ratio",
+      "mean_abs_shap": 0.2957920432090759
+    },
+    {
+      "feature": "num__loan_term",
+      "mean_abs_shap": 0.18291717767715454
+    },
+    {
+      "feature": "num__income",
+      "mean_abs_shap": 0.13473936915397644
+    },
+    {
+      "feature": "num__loan_amount",
+      "mean_abs_shap": 0.12564823031425476
+    },
+    {
+      "feature": "cat__loan_purpose_2",
+      "mean_abs_shap": 0.09840364009141922
+    },
+    {
+      "feature": "cat__interest_only_payment_2",
+      "mean_abs_shap": 0.08539807051420212
+    },
+    {
+      "feature": "cat__loan_purpose_4",
+      "mean_abs_shap": 0.04460011050105095
+    },
+    {
+      "feature": "cat__loan_type_2",
+      "mean_abs_shap": 0.04300698637962341
+    }
+  ],
+  "config_used": {
+    "dataset": "hmda",
+    "data_path": "./data/raw/hmda_ny_2022.csv",
+    "jurisdiction": "US",
+    "model_type": "xgboost",
+    "hyperparams": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "scale_pos_weight": "auto"
+    },
+    "test_size": 0.2,
+    "val_size": 0.1,
+    "random_state": 42,
+    "compute_fairness": true,
+    "compute_shap": true,
+    "compute_drift": false,
+    "temporal_column": null,
+    "output_dir": "./output/hmda_us",
+    "model_version": "1.0.0"
+  },
+  "dataset_name": "hmda",
+  "dataset_region": "US",
+  "rows_total": 100000,
+  "rows_train": 80000,
+  "rows_test": 20000,
+  "feature_count": 12,
+  "training_date_utc": "2026-04-27T07:59:38.612585+00:00",
+  "data_sha256": "726152fa6681c7b3a313ab7b10f13250bb21864c8cc20137e8ccacbabeb0f4a1",
+  "jurisdiction_code": "US",
+  "model_version": "1.0.0"
+}

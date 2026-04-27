@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files (too large for git)
+data/raw/*.xls
+data/raw/*.xlsx
+data/raw/*.parquet
+data/raw/*.csv
+!data/raw/.gitkeep
+
+# Model artifacts (general)
+*.pkl
+*.pickle
+
+# Joblib models — ignore generated ones, but ship pre-trained
+data/processed/*.joblib
+!models/*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Verification run artifacts (large, regenerable)
+verification/audit_logs/
+verification/escalations/
+verification/pipeline_results_500.csv
+verification/test_profiles_500.csv
+verification/_prior_run/
+
+# Model files in data/ (too large, regenerable — pre-trained are in models/)
+data/processed/*.joblib
+
+# Cache
+.pytest_cache/
+.ruff_cache/
+verification/run.log
+
+# Development scaffolding (not for public repo)
+docs/development/
+CLAUDE.md
+
+# Training output (regenerable)
+output/

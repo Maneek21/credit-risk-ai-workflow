@@ -1,0 +1,160 @@
+{
+  "model_path": "output\\uci_us\\uci_xgboost_v1_0_0.joblib",
+  "metrics": {
+    "auc": 0.7687932455538729,
+    "ks": 0.4166417381771632,
+    "brier": 0.1742498129606247,
+    "ece": 0.17218077266961335
+  },
+  "fairness": {
+    "SEX": {
+      "attribute": "SEX",
+      "groups": [
+        {
+          "group": "1",
+          "n": 2402,
+          "approval_rate": 0.6927560366361366,
+          "deny_rate": 0.30724396336386345,
+          "tpr": 0.6060606060606061,
+          "fpr": 0.21618685497012494
+        },
+        {
+          "group": "2",
+          "n": 3598,
+          "approval_rate": 0.7292940522512507,
+          "deny_rate": 0.2707059477487493,
+          "tpr": 0.6031331592689295,
+          "fpr": 0.1807909604519774
+        }
+      ],
+      "disparate_impact": 0.9498994740155563,
+      "demographic_parity_diff": 0.03653801561511405,
+      "equalized_odds_diff": 0.035395894518147536,
+      "passes": true
+    },
+    "AGE_BUCKET": {
+      "attribute": "AGE_BUCKET",
+      "groups": [
+        {
+          "group": "26-35",
+          "n": 2492,
+          "approval_rate": 0.7576243980738363,
+          "deny_rate": 0.24237560192616373,
+          "tpr": 0.5714285714285714,
+          "fpr": 0.16183816183816183
+        },
+        {
+          "group": "36-45",
+          "n": 1775,
+          "approval_rate": 0.7222535211267606,
+          "deny_rate": 0.27774647887323944,
+          "tpr": 0.5717884130982368,
+          "fpr": 0.193033381712627
+        },
+        {
+          "group": "46-60",
+          "n": 908,
+          "approval_rate": 0.6718061674008811,
+          "deny_rate": 0.32819383259911894,
+          "tpr": 0.6347826086956522,
+          "fpr": 0.22418879056047197
+        },
+        {
+          "group": "60+",
+          "n": 58,
+          "approval_rate": 0.6379310344827587,
+          "deny_rate": 0.3620689655172414,
+          "tpr": 0.7857142857142857,
+          "fpr": 0.22727272727272727
+        },
+        {
+          "group": "<=25",
+          "n": 767,
+          "approval_rate": 0.6140808344198174,
+          "deny_rate": 0.3859191655801825,
+          "tpr": 0.7040816326530612,
+          "fpr": 0.276707530647986
+        }
+      ],
+      "disparate_impact": 0.8105346606854793,
+      "demographic_parity_diff": 0.14354356365401888,
+      "equalized_odds_diff": 0.2142857142857143,
+      "passes": true
+    }
+  },
+  "shap_top_features": [
+    {
+      "feature": "num__PAY_0",
+      "mean_abs_shap": 0.5311862826347351
+    },
+    {
+      "feature": "num__LIMIT_BAL",
+      "mean_abs_shap": 0.23704208433628082
+    },
+    {
+      "feature": "num__BILL_AMT1",
+      "mean_abs_shap": 0.17458464205265045
+    },
+    {
+      "feature": "num__PAY_AMT1",
+      "mean_abs_shap": 0.14467616379261017
+    },
+    {
+      "feature": "num__PAY_AMT2",
+      "mean_abs_shap": 0.14391684532165527
+    },
+    {
+      "feature": "num__PAY_AMT3",
+      "mean_abs_shap": 0.12835568189620972
+    },
+    {
+      "feature": "num__PAY_2",
+      "mean_abs_shap": 0.09850601851940155
+    },
+    {
+      "feature": "num__PAY_3",
+      "mean_abs_shap": 0.09330277144908905
+    },
+    {
+      "feature": "num__PAY_AMT6",
+      "mean_abs_shap": 0.0851430743932724
+    },
+    {
+      "feature": "num__BILL_AMT6",
+      "mean_abs_shap": 0.08154032379388809
+    }
+  ],
+  "config_used": {
+    "dataset": "uci",
+    "data_path": "./data/raw/uci_default_credit.xls",
+    "jurisdiction": "US",
+    "model_type": "xgboost",
+    "hyperparams": {
+      "n_estimators": 200,
+      "max_depth": 5,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "scale_pos_weight": 3.5
+    },
+    "test_size": 0.2,
+    "val_size": 0.1,
+    "random_state": 42,
+    "compute_fairness": true,
+    "compute_shap": true,
+    "compute_drift": false,
+    "temporal_column": null,
+    "output_dir": "./output/uci_us",
+    "model_version": "1.0.0"
+  },
+  "dataset_name": "uci",
+  "dataset_region": "TW",
+  "rows_total": 30000,
+  "rows_train": 24000,
+  "rows_test": 6000,
+  "feature_count": 22,
+  "training_date_utc": "2026-04-27T07:55:52.906189+00:00",
+  "data_sha256": "396c014f3ae9d55bfde0e15e3d845d0579acd1f82b5b9f633d353f19c25a31dc",
+  "jurisdiction_code": "US",
+  "model_version": "1.0.0"
+}

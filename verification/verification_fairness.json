@@ -1,0 +1,81 @@
+{
+  "by_sex": {
+    "groups": [
+      {
+        "group": "Male",
+        "code": 1,
+        "n": 207,
+        "deny_rate": 0.2222222222222222
+      },
+      {
+        "group": "Female",
+        "code": 2,
+        "n": 293,
+        "deny_rate": 0.19112627986348124
+      }
+    ],
+    "disparate_impact": 0.8600682593856657,
+    "passes_80_rule": true
+  },
+  "by_education": {
+    "groups": [
+      {
+        "group": "Grad School",
+        "code": 1,
+        "n": 169,
+        "deny_rate": 0.15384615384615385
+      },
+      {
+        "group": "University",
+        "code": 2,
+        "n": 243,
+        "deny_rate": 0.2139917695473251
+      },
+      {
+        "group": "High School",
+        "code": 3,
+        "n": 80,
+        "deny_rate": 0.3
+      },
+      {
+        "group": "Other",
+        "code": 4,
+        "n": 8,
+        "deny_rate": 0.0
+      }
+    ],
+    "disparate_impact": 0.0,
+    "passes_80_rule": false
+  },
+  "by_age": {
+    "groups": [
+      {
+        "group": "18-30",
+        "code": "18-30",
+        "n": 157,
+        "deny_rate": 0.2356687898089172
+      },
+      {
+        "group": "31-45",
+        "code": "31-45",
+        "n": 250,
+        "deny_rate": 0.176
+      },
+      {
+        "group": "46-60",
+        "code": "46-60",
+        "n": 87,
+        "deny_rate": 0.2413793103448276
+      },
+      {
+        "group": "60+",
+        "code": "60+",
+        "n": 6,
+        "deny_rate": 0.0
+      }
+    ],
+    "disparate_impact": 0.0,
+    "passes_80_rule": false
+  },
+  "note": "Decisions are made by the XGBoost classical model; the LLM only drafts memos/adverse-action notices. Bias here reflects the model trained on UCI Default of Credit Card Clients (Taiwan, 2005)."
+}

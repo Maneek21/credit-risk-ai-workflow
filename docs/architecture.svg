@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="layer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a8c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5c4a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7b68a8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a6b4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d8f65;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a2e">Credit Risk AI Workflow — Architecture</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#666">LLMs communicate decisions but never make them</text>
+
+  <!-- Layer 1: ML DECIDES -->
+  <rect x="40" y="75" width="720" height="120" rx="12" fill="url(#layer1)" filter="url(#shadow)"/>
+  <text x="70" y="105" font-size="11" font-weight="600" fill="#88bbee" letter-spacing="1">LAYER 1</text>
+  <text x="70" y="130" font-size="16" font-weight="700" fill="#ffffff">Classical ML DECIDES</text>
+  <text x="70" y="152" font-size="12" fill="#ccdde8">XGBoost predicts probability of default (AUC 0.774)</text>
+  <text x="70" y="172" font-size="11" fill="#99bbcc">Trained on real data • SHAP explainability • Reproducible • Auditable</text>
+
+  <!-- Layer 1 metrics -->
+  <rect x="520" y="90" width="220" height="90" rx="8" fill="rgba(255,255,255,0.08)"/>
+  <text x="630" y="112" text-anchor="middle" font-size="10" fill="#88bbee">MODEL PERFORMANCE</text>
+  <text x="630" y="135" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">AUC 0.774</text>
+  <text x="630" y="155" text-anchor="middle" font-size="11" fill="#99bbcc">vs. GPT-4o: 0.579</text>
+  <text x="630" y="172" text-anchor="middle" font-size="11" fill="#99bbcc">vs. Claude: 0.564</text>
+
+  <!-- Arrow down -->
+  <polygon points="400,200 390,205 392,205 392,220 408,220 408,205 410,205" fill="#888"/>
+  <text x="420" y="215" font-size="9" fill="#666">SHAP factors</text>
+
+  <!-- Layer 2: LLM COMMUNICATES -->
+  <rect x="40" y="225" width="720" height="120" rx="12" fill="url(#layer2)" filter="url(#shadow)"/>
+  <text x="70" y="255" font-size="11" font-weight="600" fill="#c4b5e3" letter-spacing="1">LAYER 2</text>
+  <text x="70" y="280" font-size="16" font-weight="700" fill="#ffffff">LLM COMMUNICATES</text>
+  <text x="70" y="302" font-size="12" fill="#d8cce8">Drafts credit memos and denial letters from SHAP values</text>
+  <text x="70" y="322" font-size="11" fill="#b8a8cc">GPT-4o / Claude / self-hosted • 40 hours → 3 minutes • $0.17 per 500 profiles</text>
+
+  <!-- Layer 2 box -->
+  <rect x="520" y="240" width="220" height="90" rx="8" fill="rgba(255,255,255,0.08)"/>
+  <text x="630" y="262" text-anchor="middle" font-size="10" fill="#c4b5e3">LLM SCOPE</text>
+  <text x="630" y="282" text-anchor="middle" font-size="11" fill="#ffffff">✓ Write credit memos</text>
+  <text x="630" y="298" text-anchor="middle" font-size="11" fill="#ffffff">✓ Explain denial reasons</text>
+  <text x="630" y="314" text-anchor="middle" font-size="11" fill="#ff9999">✗ Make decisions</text>
+
+  <!-- Arrow down -->
+  <polygon points="400,350 390,355 392,355 392,370 408,370 408,355 410,355" fill="#888"/>
+  <text x="420" y="365" font-size="9" fill="#666">Raw output</text>
+
+  <!-- Layer 3: Code ENFORCES -->
+  <rect x="40" y="375" width="720" height="130" rx="12" fill="url(#layer3)" filter="url(#shadow)"/>
+  <text x="70" y="405" font-size="11" font-weight="600" fill="#8fd4b0" letter-spacing="1">LAYER 3</text>
+  <text x="70" y="430" font-size="16" font-weight="700" fill="#ffffff">Deterministic Code ENFORCES</text>
+  <text x="70" y="452" font-size="12" fill="#c8e8d8">Five safety layers between the LLM and the final output</text>
+
+  <!-- Safety layer chips -->
+  <rect x="70" y="465" width="115" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="127" y="481" text-anchor="middle" font-size="9" fill="#ffffff">SHAP filter</text>
+
+  <rect x="195" y="465" width="130" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="260" y="481" text-anchor="middle" font-size="9" fill="#ffffff">FCRA injection</text>
+
+  <rect x="335" y="465" width="140" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="405" y="481" text-anchor="middle" font-size="9" fill="#ffffff">Uncertainty flagging</text>
+
+  <rect x="485" y="465" width="130" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="550" y="481" text-anchor="middle" font-size="9" fill="#ffffff">Attribute filter</text>
+
+  <rect x="625" y="465" width="120" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="685" y="481" text-anchor="middle" font-size="9" fill="#ffffff">Cross-grading</text>
+
+  <!-- Bottom caption -->
+  <text x="400" y="515" text-anchor="middle" font-size="10" fill="#888">10 jurisdictions • 247 tests • 100% FCRA compliance • Apache 2.0</text>
+</svg>

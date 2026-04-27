@@ -1,0 +1,28 @@
+# Bondora P2P — EU jurisdiction (AI Act high-risk demo)
+# European peer-to-peer dataset, ~100K closed loans. The EU module
+# flags the resulting model as algorithmic-explainability + human
+# oversight + model-registration required (AI Act Annex III, Art 13/14/49).
+
+dataset: bondora
+data_path: ./data/raw/bondora_loan_data.csv
+jurisdiction: EU
+
+model_type: xgboost
+hyperparams:
+  n_estimators: 250
+  max_depth: 5
+  learning_rate: 0.08
+  subsample: 0.8
+  colsample_bytree: 0.8
+  scale_pos_weight: auto
+
+test_size: 0.20
+val_size: 0.10
+random_state: 42
+
+compute_fairness: true        # Gender + Country + Age held aside in the adapter
+compute_shap: true
+compute_drift: false
+
+output_dir: ./output/bondora_eu
+model_version: "1.0.0"

@@ -1,0 +1,62 @@
+{
+  "profiles_processed": 500,
+  "successful": 500,
+  "errors": 0,
+  "success_rate": 1.0,
+  "auc": 0.7769119999999999,
+  "accuracy": 0.66,
+  "true_positives": 91,
+  "true_negatives": 239,
+  "false_positives": 11,
+  "false_negatives": 159,
+  "deny_rate": 0.204,
+  "actual_default_rate": 0.5,
+  "borderline_flags": 87,
+  "protected_attr_profiles_flagged": 75,
+  "protected_attr_keyword_hits": 119,
+  "escalations": 144,
+  "pii_fields_scrubbed_total": 0,
+  "denials_issued": 102,
+  "denials_with_adverse_action": 102,
+  "fcra_coverage": 1.0,
+  "memos_generated": 500,
+  "avg_memo_length": 1710.422,
+  "audit_records": 500,
+  "audit_coverage": 1.0,
+  "audit_fields_ok": 12,
+  "audit_fields_required": 12,
+  "escalation_queue_records": 144,
+  "avg_processing_ms": 7607.926867599599,
+  "p95_processing_ms": 12311.616115027573,
+  "p99_processing_ms": 14071.892701087048,
+  "top_shap_features": {
+    "num__PAY_0": 298,
+    "num__LIMIT_BAL": 44,
+    "num__PAY_2": 39,
+    "num__PAY_AMT3": 28,
+    "num__PAY_AMT2": 21
+  },
+  "checks": [
+    {
+      "name": "Success rate >= 99%",
+      "passed": true
+    },
+    {
+      "name": "AUC >= 0.70",
+      "passed": true
+    },
+    {
+      "name": "FCRA coverage = 100%",
+      "passed": true
+    },
+    {
+      "name": "Audit coverage = 100%",
+      "passed": true
+    },
+    {
+      "name": "No unhandled errors",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true
+}

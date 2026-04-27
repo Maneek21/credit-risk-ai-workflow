@@ -1,0 +1,31 @@
+# Sample config for a bank's internal loan portfolio.
+#
+# Reference your custom adapter by dotted Python path. The trainer will
+# import ``examples.bring_your_own_data.custom_adapter_template`` and
+# instantiate ``MyBankAdapter()``.
+#
+# Run: python -m workflow.training train --config examples/bring_your_own_data/sample_config.yaml
+
+dataset: examples.bring_your_own_data.custom_adapter_template:MyBankAdapter
+data_path: /path/to/your/loan_portfolio.csv
+jurisdiction: IN              # change to your market: US, UK, EU, IN, CA, AU, SG, JP, AE, BR
+
+model_type: xgboost
+hyperparams:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  scale_pos_weight: auto      # adapter computes from class balance at fit time
+
+test_size: 0.20
+val_size: 0.10
+random_state: 42
+
+compute_fairness: true
+compute_shap: true
+compute_drift: false
+
+output_dir: ./output/my_bank
+model_version: "1.0.0"

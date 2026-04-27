@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "version": "1.0.0",
+      "artifact_path": "data/processed/xgboost_model.joblib",
+      "training_date": "2026-04-26T21:40:58.337147+00:00",
+      "training_data_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+      "hyperparameters": {
+        "n_estimators": 400,
+        "max_depth": 6,
+        "learning_rate": 0.05
+      },
+      "validation_metrics": {
+        "AUC": 0.7744
+      },
+      "feature_list": [
+        "LIMIT_BAL",
+        "SEX",
+        "EDUCATION",
+        "MARRIAGE",
+        "AGE",
+        "PAY_0",
+        "PAY_2",
+        "PAY_3",
+        "PAY_4",
+        "PAY_5",
+        "PAY_6",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6"
+      ],
+      "status": "champion",
+      "notes": "Reused from project Phase 2 training (seed=42, 70/15/15 stratified)"
+    }
+  ],
+  "updated_utc": "2026-04-26T21:41:06.182790+00:00"
+}

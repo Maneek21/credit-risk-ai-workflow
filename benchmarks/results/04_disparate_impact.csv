@@ -1,0 +1,55 @@
+model,attribute,group,reference_group,disparate_impact_ratio,violates_4_5ths
+logistic_regression,derived_race,2 or more minority races,White,0.8545980951242427,False
+logistic_regression,derived_race,American Indian or Alaska Native,White,0.8909823695664097,False
+logistic_regression,derived_race,Asian,White,1.0110214008265228,False
+logistic_regression,derived_race,Black or African American,White,0.9380836460756052,False
+logistic_regression,derived_race,Free Form Text Only,White,0.5268070449396017,True
+logistic_regression,derived_race,Joint,White,1.0451038105874288,False
+logistic_regression,derived_race,Native Hawaiian or Other Pacific Islander,White,0.8968937145029061,False
+logistic_regression,derived_race,Race Not Available,White,1.0011356590506089,False
+logistic_regression,derived_race,White,White,1.0,False
+logistic_regression,derived_ethnicity,Ethnicity Not Available,Not Hispanic or Latino,1.0035602614445516,False
+logistic_regression,derived_ethnicity,Free Form Text Only,Not Hispanic or Latino,0.6718489288066108,True
+logistic_regression,derived_ethnicity,Hispanic or Latino,Not Hispanic or Latino,0.9373991031901362,False
+logistic_regression,derived_ethnicity,Joint,Not Hispanic or Latino,0.9968850226980847,False
+logistic_regression,derived_ethnicity,Not Hispanic or Latino,Not Hispanic or Latino,1.0,False
+logistic_regression,derived_sex,Female,Male,0.99132085189423,False
+logistic_regression,derived_sex,Joint,Male,1.0582302378034518,False
+logistic_regression,derived_sex,Male,Male,1.0,False
+logistic_regression,derived_sex,Sex Not Available,Male,1.0473000424249543,False
+xgboost,derived_race,2 or more minority races,White,0.752391869232348,True
+xgboost,derived_race,American Indian or Alaska Native,White,0.8122412224667394,False
+xgboost,derived_race,Asian,White,1.0068655599142708,False
+xgboost,derived_race,Black or African American,White,0.8963813227763631,False
+xgboost,derived_race,Free Form Text Only,White,0.30338381823884997,True
+xgboost,derived_race,Joint,White,1.050654740751989,False
+xgboost,derived_race,Native Hawaiian or Other Pacific Islander,White,0.9049319481662041,False
+xgboost,derived_race,Race Not Available,White,0.9849928378443066,False
+xgboost,derived_race,White,White,1.0,False
+xgboost,derived_ethnicity,Ethnicity Not Available,Not Hispanic or Latino,0.9903557603116973,False
+xgboost,derived_ethnicity,Free Form Text Only,Not Hispanic or Latino,0.6984891993749425,True
+xgboost,derived_ethnicity,Hispanic or Latino,Not Hispanic or Latino,0.9114740998248594,False
+xgboost,derived_ethnicity,Joint,Not Hispanic or Latino,1.0119589761570826,False
+xgboost,derived_ethnicity,Not Hispanic or Latino,Not Hispanic or Latino,1.0,False
+xgboost,derived_sex,Female,Male,0.9875276131878685,False
+xgboost,derived_sex,Joint,Male,1.07310413327006,False
+xgboost,derived_sex,Male,Male,1.0,False
+xgboost,derived_sex,Sex Not Available,Male,1.0501661439077328,False
+mlp,derived_race,2 or more minority races,White,0.784555061039844,True
+mlp,derived_race,American Indian or Alaska Native,White,0.8404477511401475,False
+mlp,derived_race,Asian,White,1.0083159411678633,False
+mlp,derived_race,Black or African American,White,0.9111087141976448,False
+mlp,derived_race,Free Form Text Only,White,0.3621023358645433,True
+mlp,derived_race,Joint,White,1.0477141463440798,False
+mlp,derived_race,Native Hawaiian or Other Pacific Islander,White,0.9000644083227987,False
+mlp,derived_race,Race Not Available,White,0.9929437221080679,False
+mlp,derived_race,White,White,1.0,False
+mlp,derived_ethnicity,Ethnicity Not Available,Not Hispanic or Latino,0.995246932667775,False
+mlp,derived_ethnicity,Free Form Text Only,Not Hispanic or Latino,0.7204335787630837,True
+mlp,derived_ethnicity,Hispanic or Latino,Not Hispanic or Latino,0.9178857447944474,False
+mlp,derived_ethnicity,Joint,Not Hispanic or Latino,1.0143470239222911,False
+mlp,derived_ethnicity,Not Hispanic or Latino,Not Hispanic or Latino,1.0,False
+mlp,derived_sex,Female,Male,0.9931377425455251,False
+mlp,derived_sex,Joint,Male,1.0726545106115675,False
+mlp,derived_sex,Male,Male,1.0,False
+mlp,derived_sex,Sex Not Available,Male,1.057042020877779,False
