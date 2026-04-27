@@ -54,8 +54,7 @@ from postprocess import (  # noqa: E402
 
 # ---- Reuse v1 helpers (do not modify v1) ----
 from phase6c_workflow_eval import (  # noqa: E402
-    LABEL_MAP, POPULATION_STATS,
-    _format_value, _profile_lines, _shap_lines,
+    LABEL_MAP, _format_value, _profile_lines, _shap_lines,
     _memo_user_message, _adverse_user_message,
 )
 
@@ -394,9 +393,8 @@ def main() -> int:
     decisions = ["DENY" if p >= DECISION_THRESHOLD else "APPROVE" for p in pds]
     print(f"  XGBoost denies {sum(d == 'DENY' for d in decisions)}/{len(decisions)}")
 
-    import openai, anthropic
+    import openai
     oai = openai.OpenAI()
-    anth = anthropic.Anthropic()
 
     spend = 0.0
     if API_LOG_CSV.exists():
@@ -524,7 +522,7 @@ def main() -> int:
                   f"issues={n_iss} spend=${spend:.4f}"
                   f"{' ERR=' + err[:50] if err else ''}", flush=True)
             if spend >= SPEND_CAP_USD:
-                print(f"  spend cap ${SPEND_CAP_USD} hit - cancel remaining memos.");
+                print(f"  spend cap ${SPEND_CAP_USD} hit - cancel remaining memos.")
                 for f2 in futures: f2.cancel()
                 break
 

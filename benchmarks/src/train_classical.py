@@ -10,12 +10,9 @@ on the held-out test set. Writes:
 """
 from __future__ import annotations
 
-import json
 import warnings
-from pathlib import Path
 
 import joblib
-import numpy as np
 import pandas as pd
 from sklearn.calibration import calibration_curve
 from sklearn.compose import ColumnTransformer

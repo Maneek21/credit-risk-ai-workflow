@@ -19,7 +19,6 @@ import json
 import os
 import re
 import time
-from pathlib import Path
 from textwrap import dedent
 
 import numpy as np
@@ -340,7 +339,6 @@ def main() -> None:
     new_decisions = []
     api_log = []
     spend = 0.0
-    aborted = False
     skipped = 0
     or_runners = [(p, m, fn) for p, m, fn in runners if p == "openrouter"]
     seq_runners = [(p, m, fn) for p, m, fn in runners if p != "openrouter"]
@@ -422,7 +420,6 @@ def main() -> None:
     # ---- Run commercial concurrently ----
     import threading
     from concurrent.futures import ThreadPoolExecutor, as_completed
-    spend_lock = threading.Lock()
     record_lock = threading.Lock()
     MAX_WORKERS = int(os.environ.get("PHASE6_WORKERS", "10"))
 
@@ -462,7 +459,6 @@ def main() -> None:
             if spend >= SPEND_CAP_USD:
                 print(f"  spend cap ${SPEND_CAP_USD} hit — cancelling remaining.")
                 for f2 in futures: f2.cancel()
-                aborted = True
                 break
 
     print(f"  total new decisions: {len(new_decisions)}, skipped: {skipped}, spend: ${spend:.4f}")

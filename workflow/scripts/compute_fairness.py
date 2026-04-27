@@ -111,7 +111,7 @@ def plot_disparate_impact(di_rows):
     for i, attr in enumerate(["sex", "education", "age"]):
         ax = axes[i]
         sub = df[df["attribute"] == attr]
-        bars = ax.bar(sub["model"].str.replace("_", "\n"), sub["di_ratio"], color="#3b82f6", alpha=0.8)
+        ax.bar(sub["model"].str.replace("_", "\n"), sub["di_ratio"], color="#3b82f6", alpha=0.8)
         ax.axhline(y=0.80, color="red", linestyle="--", linewidth=1.5, label="Four-fifths threshold")
         ax.set_title(f"DI Ratio: {attr.title()}", fontsize=12, fontweight="bold")
         ax.set_ylim(0, 1.1)

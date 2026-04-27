@@ -6,7 +6,6 @@ Usage:
   python scripts/compute_shap.py --bootstrap 50   # stability analysis
 """
 import argparse
-import sys
 import warnings
 from pathlib import Path
 
@@ -115,7 +114,7 @@ def compute_and_plot(models, X_test, X_train):
         clean_feat = _clean_names(raw_feat)
         Xexp_t = _transform(pipe, X_explain)
 
-        fig = plt.figure(figsize=(10, 7))
+        plt.figure(figsize=(10, 7))
         shap.summary_plot(
             sv, Xexp_t, feature_names=clean_feat,
             show=False, max_display=15, plot_size=None,

@@ -11,7 +11,6 @@ Usage:
   python scripts/prepare_data.py --dataset hmda --year 2022
 """
 import argparse
-import os
 import sys
 from pathlib import Path
 

@@ -72,7 +72,7 @@ def main():
         print(f"\n{'='*60}")
         print(f"ADVERSE ACTION NOTICE:\n{result.adverse_action}")
 
-    print(f"\nSHAP Factors:")
+    print("\nSHAP Factors:")
     for f in result.shap_factors:
         if "error" not in f:
             print(f"  {f['feature']}: {f['shap_value']:.4f} ({f['direction']})")

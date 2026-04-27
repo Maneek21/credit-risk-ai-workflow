@@ -18,7 +18,6 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import joblib
-import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LogisticRegression
@@ -29,7 +28,6 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 from .datasets import DatasetAdapter, resolve_adapter
 from .evaluation import (
-    FairnessReport,
     compute_fairness,
     compute_shap_summary,
     core_metrics,

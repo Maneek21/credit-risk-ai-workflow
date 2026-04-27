@@ -18,7 +18,7 @@ REPORT.mkdir(parents=True, exist_ok=True)
 
 try:
     from docx import Document
-    from docx.shared import Inches, Pt, Cm
+    from docx.shared import Inches
     from docx.enum.text import WD_ALIGN_PARAGRAPH
 except ImportError:
     print("ERROR: python-docx is required. Install with: pip install python-docx", file=sys.stderr)
@@ -142,7 +142,7 @@ def main():
     if (RESULTS / "llm_metrics.csv").exists():
         add_table_from_csv(doc, RESULTS / "llm_metrics.csv", "Table 5: LLM Accuracy Metrics")
     if (RESULTS / "llm_decisions.csv").exists():
-        doc.add_paragraph(f"Full decisions logged in: llm_decisions.csv")
+        doc.add_paragraph("Full decisions logged in: llm_decisions.csv")
 
     # Save
     out_path = Path(args.output)

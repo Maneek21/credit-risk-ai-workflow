@@ -10,16 +10,14 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import joblib
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_auc_score
-from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.preprocessing import StandardScaler
 
 SEED = 42
 ROOT = Path(__file__).resolve().parent.parent

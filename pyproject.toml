@@ -1,0 +1,30 @@
+# Project metadata + ruff lint configuration.
+#
+# Note: this file does not yet declare a build backend — the package is
+# pip-installable via setup.cfg / setup.py if/when one is added. Today
+# this file exists primarily to scope the ruff lint rules so CI is
+# stable across the production module (workflow/), the research code
+# (benchmarks/src/), and the example notebooks (examples/).
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+# Default rule selection (E + F) with stylistic noise suppressed.
+# Multi-statement-on-one-line and lambda-assignment rules flag patterns
+# that are deliberate in research / plotting code (compact one-liners,
+# matplotlib idioms). Real bugs (unused imports, undefined names,
+# unused variables) stay enabled.
+ignore = [
+    "E701",  # multiple-statements-on-one-line-colon  (e.g. `if x: do()`)
+    "E702",  # multiple-statements-on-one-line-semicolon (e.g. `a = 1; b = 2`)
+    "E703",  # useless-semicolon
+    "E731",  # lambda-assignment
+]
+
+[tool.ruff.lint.per-file-ignores]
+# generate_report.py imports `pandas` after a conditional `from docx ...`
+# block that exits early when python-docx isn't installed. The deferred
+# import is intentional, so allow E402 there.
+"workflow/scripts/generate_report.py" = ["E402"]
